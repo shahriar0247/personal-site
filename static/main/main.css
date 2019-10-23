@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.a {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 70%;
+      grid-template-columns: 30% 70%;
+  height: 100vh;
+}
+
+.a1 {
+  background: #3F51B5;
+  color: white;
+}
+
+.a2 img {
+  width: 70vw;
+  margin-left: -30%;
+  margin-top: 40%;
+  border: #3F51B5 1px solid;
+}
+
+.a2 {
+  color: #222222;
+  margin-left: 10%;
+  background: rgba(0, 0, 0, 0);
+}
+
+.a2 h3 {
+  font-size: 130%;
+}
+
+.c1 img {
+  width: 50px;
+  padding: 2%;
+}
+
+.c {
+  margin-left: 5%;
+  margin-top: 80vh;
+}
+
+.c2 p {
+  margin-left: 1%;
+}
+
+@media (min-width: 500px) {
+  .a2 img {
+    width: 50vw;
+  }
+}
+
+@media (min-width: 600px) {
+  .a2 img {
+    width: 40vw;
+  }
+}
+
+@media (min-width: 700px) {
+  .a2 img {
+    width: 30vw;
+  }
+}
+
+@media (min-width: 800px) {
+  .a2 {
+    margin-top: -20%;
+  }
+  .c {
+    margin-left: 10%;
+    margin-top: 90vh;
+  }
+}
+
+@media (min-width: 1000px) {
+  .a2 img {
+    width: 20vw;
+  }
+  .a21, .a22 {
+    padding: 10%;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 1100px) {
+  .a2 {
+    margin-top: -30%;
+  }
+}
+/*# sourceMappingURL=main.css.map */
