@@ -8,6 +8,8 @@ body {
 
 body {
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+  margin-bottom: 500px;
 }
 
 .a {
@@ -21,6 +23,7 @@ body {
 .a1 {
   background: #3F51B5;
   color: white;
+  height: 100vh;
 }
 
 .a2 img {
@@ -63,6 +66,9 @@ body {
 @media (min-width: 600px) {
   .a2 img {
     width: 40vw;
+  }
+  .a23 {
+    margin-top: 20%;
   }
 }
 

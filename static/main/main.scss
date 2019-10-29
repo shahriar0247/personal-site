@@ -11,6 +11,8 @@ body {
 
 body {
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+  margin-bottom: 500px;
 }
 
 .a {
@@ -21,6 +23,8 @@ body {
 .a1 {
   background: $accent-color;
   color: white;
+  height: 100vh;
+
 }
 .a2 img {
   width: 70vw;
@@ -36,6 +40,8 @@ body {
 .a2 h3 {
   font-size: 130%;
 }
+
+
 .c1 img {
   width: 50px;
   padding: 2%;
@@ -58,6 +64,9 @@ body {
 @media (min-width: 600px) {
   .a2 img{
     width: 40vw;
+  }
+  .a23{
+    margin-top: 20%;
   }
   
 }

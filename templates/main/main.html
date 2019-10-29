@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ahmed Shahriar</title>
     <link rel="stylesheet" href="static/main/main.css">
@@ -11,35 +11,102 @@
 
 <body>
     <div class="a">
-        <div class="a1"><div class="c">
+        <div class="a1">
+            <div class="c">
                 <h4>Social:</h>
-                <div class="c1">
-                    <img src="static/images/social/i.png" onclick="openinstagram()">
-                    <img src="static/images/social/l.png" onclick="openlinkedin()">
-                </div>
-                
-            </div></div>
-        <div class="a2"><img src="static/images/1/1.jpg">
+                    <div class="c1">
+                        <img src="static/images/social/i.png" onclick="openinstagram()">
+                        <img src="static/images/social/l.png" onclick="openlinkedin()">
+                    </div>
+
+            </div>
+        </div>
+        <div class="a2"><img src="static/images/1/1.jpg" class="a2pic">
             <div class="a21">
                 <h3>Ahmed Shahriar</h3>
-        <p>Security researcher and software developer through Google, Youtube, Stackoverflow, etc.</p>
+                <p>Security researcher and software developer through Google, Youtube, Stackoverflow, etc.</p>
             </div>
-            <div class="a22"> <h4>What do I do?</h4> <p>I am super interested in computers and software. I always wanted to make my own website, app, etc. And also being able to hack into everything was my dream. Now I know the way and I am just pushing my self further to my goal.</p><div class="c2"><h5>Email:</h5><p>shahriar0247@gmail.com</p></div></div>
+            <div class="a22">
+                <h4>What do I do?</h4>
+                <p>I am super interested in computers and software. I always wanted to make my own website, app, etc.
+                    And also being able to hack into everything was my dream. Now I know the way and I am just pushing
+                    my self further to my goal.</p>
+                <div class="c2">
+                    <h5>Email:</h5>
+                    <p>shahriar0247@gmail.com</p>
+                </div>
+            </div>
+            <div class="a23">
+                <br>
+                <h3>Welcome to my portfolio</h3>
+            </div>
         </div>
     </div>
     </div>
     </div>
     <div class="b">
-       
+
     </div>
-    
+
 </body>
 <script>
-function openinstagram(){
-    window.open("https://www.instagram.com/shahriar0247")
-}
-function openlinkedin(){
-    window.open("https://www.linkedin.com/in/ahmed-shahriar-6a1607195/")
-}
+    function openinstagram() {
+        window.open("https://www.instagram.com/shahriar0247")
+    }
+    function openlinkedin() {
+        window.open("https://www.linkedin.com/in/ahmed-shahriar-6a1607195/")
+    }
+    opacityscroll = 180
+    window.addEventListener('scroll', function (e) {
+        picture = document.getElementsByClassName('a2pic')[0]
+        ratepic = window.pageYOffset * -1
+        picture.style.transform = 'translate3d('+ratepic+'px,'+window.pageYOffset+'px,0px)'
+      
+        picture.style.opacity = 1 - window.pageYOffset / opacityscroll
+    })
+    window.addEventListener('scroll', function (e) {
+        a21 = document.getElementsByClassName('a21')[0]
+        a22 = document.getElementsByClassName('a22')[0]
+        ratepic2 = window.pageYOffset * 1
+        a21.style.transform = 'translate3d('+ratepic2+'px,'+window.pageYOffset+'px,0px)'
+        a22.style.transform = 'translate3d('+ratepic2+'px,'+window.pageYOffset+'px,0px)'
+        a21.style.opacity = 1 - window.pageYOffset / opacityscroll
+        a22.style.opacity = 1 - window.pageYOffset / opacityscroll
+    })
+    window.addEventListener('scroll', function (e) {
+        a23 = document.getElementsByClassName('a23')[0]
+        
+        ratepic3 = window.pageYOffset * -1
+        a23.style.transform = 'translate3d(0px,'+ratepic3+'px,0px)'
+        
+       if (window.pageYOffset > 180 && window.pageYOffset < 300){
+        a23.style.opacity = (window.pageYOffset -185) /100
+        
+        }
+       else if(window.pageYOffset > 300 && window.pageYOffset < 350){
+           a23.style.opacity = 1
+          a23opacity = 1 - ((((window.pageYOffset/200)-1)*2)-1) 
+         
+           a23.style.opacity = 1 - ((window.pageYOffset -300) / 50)
+       }
+        else{
+            a23.style.opacity = 0
+        }
+        
+    })
+    window.addEventListener('scroll', function(e){
+        a1 = document.getElementsByClassName('a1')[0]
+        a1.style.transform = 'translate3d(0px,'+window.pageYOffset+'px, 0px)'
+        if (window.pageYOffset > 360  && window.pageYOffset < 431){
+            a1.style.width = (window.pageYOffset - 360) +29+'vw'
+        }
+        else if(window.pageYOffset > 430){
+            a1.style.width = '100vw'
+        }
+        else{
+            a1.style.width = 30+'vw'
+        }
+    })
 </script>
+
 </html>
